@@ -1,0 +1,3 @@
+﻿Skapa ny kund (användaren ska kunna mata in uppgifter om en ny kund)
+Visa hur många kunder som finns i systemet
+Visa en lista över alla kunderna
