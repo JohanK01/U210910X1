@@ -18,7 +18,7 @@ namespace CRM
                 if (orden == "1")
                 {
                     Console.WriteLine("Förnamn, efternamn och ålder");
-                    
+
                     myKunder.Add(new Kunder()
                     {
                         name = Console.ReadLine(),
@@ -27,7 +27,8 @@ namespace CRM
                     });
 
                     Console.WriteLine("Ny kund skapad");
-                   
+                    
+
                 }
                 if (orden == "2")
                 {
@@ -36,12 +37,20 @@ namespace CRM
                 }
                 if (orden == "3")
                 {
-
+                    foreach (Kunder k in myKunder)
+                    {
+                        Console.WriteLine($"{k.name} {k.lastname} {k.age}");
+                    }
                 }
                 if (orden == "4")
                 {
                     break;
                 }
+                if (orden == "cls")
+                {
+                    Console.Clear();
+                }
+                
             }
         }
     }
