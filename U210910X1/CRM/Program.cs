@@ -1,11 +1,13 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace CRM
 {
     class Program
     {
         static void Main(string[] args)
         {
+            List<Kunder> myKunder = new List<Kunder>();
+
 
             while (true)
             {
@@ -16,6 +18,12 @@ namespace CRM
                 if (orden == "1")
                 {
                     Console.WriteLine("Förnamn och efternamn");
+                    myKunder.Add(new Kunder() { name = "johan", lastname = "Klausen", age = "20" });
+
+                    foreach (Kunder k in myKunder)
+                    {
+                        Console.WriteLine($"{k.name} {k.lastname} {k.age}");
+                    }
                 }
                 if (orden == "2")
                 {
@@ -31,5 +39,11 @@ namespace CRM
                 }
             }
         }
+    }
+    public class Kunder
+    {
+        public string name;
+        public string lastname;
+        public string age;
     }
 }
