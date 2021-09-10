@@ -17,17 +17,22 @@ namespace CRM
 
                 if (orden == "1")
                 {
-                    Console.WriteLine("Förnamn och efternamn");
-                    myKunder.Add(new Kunder() { name = "johan", lastname = "Klausen", age = "20" });
-
-                    foreach (Kunder k in myKunder)
+                    Console.WriteLine("Förnamn, efternamn och ålder");
+                    
+                    myKunder.Add(new Kunder()
                     {
-                        Console.WriteLine($"{k.name} {k.lastname} {k.age}");
-                    }
+                        name = Console.ReadLine(),
+                        lastname = Console.ReadLine(),
+                        age = Console.ReadLine()
+                    });
+
+                    Console.WriteLine("Ny kund skapad");
+                   
                 }
                 if (orden == "2")
                 {
                     Console.WriteLine("visa antal kunder");
+                    Console.WriteLine($"{myKunder.Count}");
                 }
                 if (orden == "3")
                 {
